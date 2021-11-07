@@ -70,3 +70,16 @@ let hogwarts = [
     occupation: "Teacher",
   },
 ];
+
+
+function getNames (arr){
+  const [{firstName}, {lastName}] = hogwarts;
+
+  arr.forEach(person => {
+    if (person.house === "Gryffindor"){
+      console.log(`${person.firstName} ${person.lastName}`);
+    }
+  });
+}
+
+getNames(hogwarts);
