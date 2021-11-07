@@ -16,6 +16,8 @@ Take a look at the following code:
 
 Explain why line 4 and line 6 output different numbers.
 
+Answer: Is it because of the block scope? x = 2 only exists inside the function. 
+
 ## Question 2
 
 Take a look at the following code:
@@ -34,6 +36,8 @@ console.log(y)
 ```
 
 What will be the output of this code. Explain your answer in 50 words or less.
+
+Console.logging function f1 will print 10 because it has access to the global variable x. Trying to console.log y will return undefined because it does not have access to variable y, as it's limited in bloc scope to the function.  
 
 ## Question 3
 
@@ -62,3 +66,7 @@ console.log(y);
 ```
 
 What will be the output of this code. Explain your answer in 50 words or less.
+
+calling f1(x) returns the value 10 inside the function due to operations present in the function.  
+Console.logging (x) returns 9 becaus eit can only access the original value of ex and no the operations. 
+Same for f2(), but if you console.log (y) an object will be printed. 

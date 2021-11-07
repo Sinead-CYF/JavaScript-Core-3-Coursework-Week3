@@ -7,8 +7,16 @@ let order = [
   { itemName: "Hash Brown", quantity: 4, unitPrice: 0.4 },
 ];
 
-
-function printReceipt(arr){
-  
-
+function printReceipt(arr) {
+  let total = 0;
+  console.log(`QTY       \tITEM\t            \tTOTAL`);
+  arr.forEach((item) => {
+    ({ itemName, quantity, unitPrice } = item);
+    let totalUnitPrice = unitPrice * quantity;
+    console.log(`${quantity}          \t${itemName}            \t${totalUnitPrice.toFixed(2)}`);
+    total += totalUnitPrice; 
+  });
+  console.log(`\n TOTAL: ${total}`);
 }
+
+printReceipt(order);
